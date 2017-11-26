@@ -1,0 +1,94 @@
+<!-- Message of the moment: <b>{{ message }}</b> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize RSA control center by Polyot STC,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords" content="materialize admin template, RSA, Polyot, responsive admin template,">
+    <title>RSA Template</title>
+    <!-- Favicons-->
+    <link rel="icon" href="../../img/favicon/favicon-32x32.png" sizes="32x32">
+    <!-- For iPhone -->
+    <link rel="apple-touch-icon-precomposed" href="../../img/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- CORE CSS-->
+    <link href="../css/materialize.css" type="text/css" rel="stylesheet">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    <!-- End Page Loading -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START HEADER -->
+    <header id="header" class="page-topbar">
+    	{% block nav %}{% endblock %}
+
+    	
+
+   	</header>
+
+{% block content %}{% endblock %}
+
+Message of the moment: <b>{{ message }}</b>
+
+
+   	<footer>
+   		{% block footer %}{% endblock %}
+   		<div class="container">
+        <div class="row section">
+          <div class="col l6 s12">
+            <h5 class="white-text">World Market</h5>
+            <p class="grey-text text-lighten-4">World map, world regions, countries and cities.</p>
+            <div id="world-map-markers"></div>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Sales by Country</h5>
+            <p class="grey-text text-lighten-4">A sample polar chart to show sales by country.</p>
+            <div id="polar-chart-holder">
+              <canvas id="polar-chart-country" width="200"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <div class="footer-copyright">
+          <div class="container">
+            <span>Copyright ©
+              <script type="text/javascript">
+                document.write(new Date().getFullYear());
+              </script> <a class="grey-text text-lighten-2" href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">PIXINVENT</a> All rights reserved.</span>
+            <span class="right hide-on-small-only"> Design and Developed by <a class="grey-text text-lighten-2" href="https://pixinvent.com/">PIXINVENT</a></span>
+          </div>
+        </div>
+      </div>
+   	</footer>
+
+
+   	 <!-- ================================================
+    Scripts
+    ================================================ -->
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="../materialize.min.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="../../vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <!--app.js - Some Specific JS codes for this app-->
+    <script type="text/javascript" src="../js/app.js"></script>
+
+    {% block javascript %}{% endblock %}
+   	
+
+</body>
